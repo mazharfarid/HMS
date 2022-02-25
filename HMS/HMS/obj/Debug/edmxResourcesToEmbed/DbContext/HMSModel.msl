@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HospitalManagementModelStoreContainer" CdmEntityContainer="HospitalManagementEntities">
+    <EntitySetMapping Name="BedsParamtersTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.BedsParamtersTb">
+        <MappingFragment StoreEntitySet="BedsParamtersTb">
+          <ScalarProperty Name="PriceOfBed" ColumnName="PriceOfBed" />
+          <ScalarProperty Name="ClosureRate" ColumnName="ClosureRate" />
+          <ScalarProperty Name="DecommissionRate" ColumnName="DecommissionRate" />
+          <ScalarProperty Name="BedTypeId" ColumnName="BedTypeId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="BedParameterId" ColumnName="BedParameterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BedTypesTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.BedTypesTb">
+        <MappingFragment StoreEntitySet="BedTypesTb">
+          <ScalarProperty Name="BedType" ColumnName="BedType" />
+          <ScalarProperty Name="BedTypeId" ColumnName="BedTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.CategoryTb">
+        <MappingFragment StoreEntitySet="CategoryTb">
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentBedTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.CurrentBedTb">
+        <MappingFragment StoreEntitySet="CurrentBedTb">
+          <ScalarProperty Name="Opex" ColumnName="Opex" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BedTypeId" ColumnName="BedTypeId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CurrentBedID" ColumnName="CurrentBedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentEquipmentTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.CurrentEquipmentTb">
+        <MappingFragment StoreEntitySet="CurrentEquipmentTb">
+          <ScalarProperty Name="Opex" ColumnName="Opex" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DateofPurchase" ColumnName="DateofPurchase" />
+          <ScalarProperty Name="Downtime" ColumnName="Downtime" />
+          <ScalarProperty Name="OperationalHoursPerDay" ColumnName="OperationalHoursPerDay" />
+          <ScalarProperty Name="DailyOperatingHours" ColumnName="DailyOperatingHours" />
+          <ScalarProperty Name="EquipmentTypeId" ColumnName="EquipmentTypeId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CurrentEquipmentId" ColumnName="CurrentEquipmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentOperatingRoomTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.CurrentOperatingRoomTb">
+        <MappingFragment StoreEntitySet="CurrentOperatingRoomTb">
+          <ScalarProperty Name="Opex" ColumnName="Opex" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DownTime" ColumnName="DownTime" />
+          <ScalarProperty Name="OperationalDaysPerWeek" ColumnName="OperationalDaysPerWeek" />
+          <ScalarProperty Name="DailyOperatingHours" ColumnName="DailyOperatingHours" />
+          <ScalarProperty Name="OperatingRoomId" ColumnName="OperatingRoomId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="OperatingRoomRecordId" ColumnName="OperatingRoomRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentWorkForceTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.CurrentWorkForceTb">
+        <MappingFragment StoreEntitySet="CurrentWorkForceTb">
+          <ScalarProperty Name="NumberOfHoursPerDay" ColumnName="NumberOfHoursPerDay" />
+          <ScalarProperty Name="YearlySalary" ColumnName="YearlySalary" />
+          <ScalarProperty Name="ProgramStartDate" ColumnName="ProgramStartDate" />
+          <ScalarProperty Name="Program" ColumnName="Program" />
+          <ScalarProperty Name="PermanentStatus" ColumnName="PermanentStatus" />
+          <ScalarProperty Name="GradeId" ColumnName="GradeId" />
+          <ScalarProperty Name="CertifiedSubSpecialityId" ColumnName="CertifiedSubSpecialityId" />
+          <ScalarProperty Name="CertifiedSpecialityId" ColumnName="CertifiedSpecialityId" />
+          <ScalarProperty Name="CertifiedJobTypeId" ColumnName="CertifiedJobTypeId" />
+          <ScalarProperty Name="CurrentSubSpecialityId" ColumnName="CurrentSubSpecialityId" />
+          <ScalarProperty Name="CurrentSpecialityId" ColumnName="CurrentSpecialityId" />
+          <ScalarProperty Name="CurrentJobTypeId" ColumnName="CurrentJobTypeId" />
+          <ScalarProperty Name="DateofHire" ColumnName="DateofHire" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CurrentWorkforceId" ColumnName="CurrentWorkforceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentParamtersTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.EquipmentParamtersTb">
+        <MappingFragment StoreEntitySet="EquipmentParamtersTb">
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="AverageLifeTime" ColumnName="AverageLifeTime" />
+          <ScalarProperty Name="EquipmentTypeId" ColumnName="EquipmentTypeId" />
+          <ScalarProperty Name="EquipmentParameterId" ColumnName="EquipmentParameterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentTypeTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.EquipmentTypeTb">
+        <MappingFragment StoreEntitySet="EquipmentTypeTb">
+          <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+          <ScalarProperty Name="EquipmentTypeId" ColumnName="EquipmentTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainSupplyTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.MainSupplyTb">
+        <MappingFragment StoreEntitySet="MainSupplyTb">
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlannedBedsTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.PlannedBedsTb">
+        <MappingFragment StoreEntitySet="PlannedBedsTb">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="PlannedYearofPurchase" ColumnName="PlannedYearofPurchase" />
+          <ScalarProperty Name="BedTypeId" ColumnName="BedTypeId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="PlannedBedId" ColumnName="PlannedBedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlannedEquipmentTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.PlannedEquipmentTb">
+        <MappingFragment StoreEntitySet="PlannedEquipmentTb">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="DateOfPurchase" ColumnName="DateOfPurchase" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="EquipmentTypeId" ColumnName="EquipmentTypeId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PlannedEquipmentId" ColumnName="PlannedEquipmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlannedOperatingRoomTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.PlannedOperatingRoomTb">
+        <MappingFragment StoreEntitySet="PlannedOperatingRoomTb">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="DateOfEstablishment" ColumnName="DateOfEstablishment" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PlannedOperatingRoomId" ColumnName="PlannedOperatingRoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlannedWorkforceTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.PlannedWorkforceTb">
+        <MappingFragment StoreEntitySet="PlannedWorkforceTb">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="YearOfJoining" ColumnName="YearOfJoining" />
+          <ScalarProperty Name="GradeId" ColumnName="GradeId" />
+          <ScalarProperty Name="CertifiedSubSpecialityId" ColumnName="CertifiedSubSpecialityId" />
+          <ScalarProperty Name="CertifiedSpecialityId" ColumnName="CertifiedSpecialityId" />
+          <ScalarProperty Name="CurrentSpecialityId" ColumnName="CurrentSpecialityId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PlannedWorkforceId" ColumnName="PlannedWorkforceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategoryTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.SubCategoryTb">
+        <MappingFragment StoreEntitySet="SubCategoryTb">
+          <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.UserTb">
+        <MappingFragment StoreEntitySet="UserTb">
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceCertifiedJobTypeTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceCertifiedJobTypeTb">
+        <MappingFragment StoreEntitySet="WorkforceCertifiedJobTypeTb">
+          <ScalarProperty Name="CertifiedJobType" ColumnName="CertifiedJobType" />
+          <ScalarProperty Name="CertifiedJobTypeId" ColumnName="CertifiedJobTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceCertifiedSpecialityTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceCertifiedSpecialityTb">
+        <MappingFragment StoreEntitySet="WorkforceCertifiedSpecialityTb">
+          <ScalarProperty Name="CertifiedSpeciality" ColumnName="CertifiedSpeciality" />
+          <ScalarProperty Name="CertifiedSpecialityId" ColumnName="CertifiedSpecialityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceCertifiedSubSpecialityTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceCertifiedSubSpecialityTb">
+        <MappingFragment StoreEntitySet="WorkforceCertifiedSubSpecialityTb">
+          <ScalarProperty Name="CertifiedSubSpeciality" ColumnName="CertifiedSubSpeciality" />
+          <ScalarProperty Name="CertifiedSubSpecialityId" ColumnName="CertifiedSubSpecialityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceClinicalProgramTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceClinicalProgramTb">
+        <MappingFragment StoreEntitySet="WorkforceClinicalProgramTb">
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ClinicalProgramId" ColumnName="ClinicalProgramId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceCurrentJobTypeTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceCurrentJobTypeTb">
+        <MappingFragment StoreEntitySet="WorkforceCurrentJobTypeTb">
+          <ScalarProperty Name="CurrentJobType" ColumnName="CurrentJobType" />
+          <ScalarProperty Name="CurrentJobTypeId" ColumnName="CurrentJobTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceCurrentSpecialityTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceCurrentSpecialityTb">
+        <MappingFragment StoreEntitySet="WorkforceCurrentSpecialityTb">
+          <ScalarProperty Name="CurrentSpeciality" ColumnName="CurrentSpeciality" />
+          <ScalarProperty Name="CurrentSpecialityId" ColumnName="CurrentSpecialityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceCurrentSubSpecialityTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceCurrentSubSpecialityTb">
+        <MappingFragment StoreEntitySet="WorkforceCurrentSubSpecialityTb">
+          <ScalarProperty Name="CurrentSubSpeciality" ColumnName="CurrentSubSpeciality" />
+          <ScalarProperty Name="CurrentSpecialityId" ColumnName="CurrentSpecialityId" />
+          <ScalarProperty Name="CurrentSubSpecialityId" ColumnName="CurrentSubSpecialityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceGradeTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceGradeTb">
+        <MappingFragment StoreEntitySet="WorkforceGradeTb">
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="GradeId" ColumnName="GradeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkforceParamtersTbs">
+      <EntityTypeMapping TypeName="HospitalManagementModel.WorkforceParamtersTb">
+        <MappingFragment StoreEntitySet="WorkforceParamtersTb">
+          <ScalarProperty Name="FTEPerDayHours" ColumnName="FTEPerDayHours" />
+          <ScalarProperty Name="RetirementAge" ColumnName="RetirementAge" />
+          <ScalarProperty Name="AbsentismRate" ColumnName="AbsentismRate" />
+          <ScalarProperty Name="AttritionRate" ColumnName="AttritionRate" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="GradeId" ColumnName="GradeId" />
+          <ScalarProperty Name="CurrentSubSpecialityId" ColumnName="CurrentSubSpecialityId" />
+          <ScalarProperty Name="CurrentSpecialityId" ColumnName="CurrentSpecialityId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="WorkforceParamterId" ColumnName="WorkforceParamterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

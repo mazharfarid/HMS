@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HospitalManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BedsParamtersTb">
+    <Key>
+      <PropertyRef Name="BedParameterId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+      <PropertyRef Name="BedTypeId" />
+    </Key>
+    <Property Name="BedParameterId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="BedTypeId" Type="int" Nullable="false" />
+    <Property Name="DecommissionRate" Type="float" />
+    <Property Name="ClosureRate" Type="float" />
+    <Property Name="PriceOfBed" Type="float" />
+  </EntityType>
+  <EntityType Name="BedTypesTb">
+    <Key>
+      <PropertyRef Name="BedTypeId" />
+    </Key>
+    <Property Name="BedTypeId" Type="int" Nullable="false" />
+    <Property Name="BedType" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CategoryTb">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrentBedTb">
+    <Key>
+      <PropertyRef Name="CurrentBedID" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+      <PropertyRef Name="BedTypeId" />
+    </Key>
+    <Property Name="CurrentBedID" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="BedTypeId" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="Opex" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="CurrentEquipmentTb">
+    <Key>
+      <PropertyRef Name="CurrentEquipmentId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="CurrentEquipmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="EquipmentTypeId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DailyOperatingHours" Type="int" Nullable="false" />
+    <Property Name="OperationalHoursPerDay" Type="int" Nullable="false" />
+    <Property Name="Downtime" Type="int" Nullable="false" />
+    <Property Name="DateofPurchase" Type="date" Nullable="false" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Opex" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CurrentOperatingRoomTb">
+    <Key>
+      <PropertyRef Name="OperatingRoomRecordId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="OperatingRoomRecordId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="OperatingRoomId" Type="int" />
+    <Property Name="DailyOperatingHours" Type="int" />
+    <Property Name="OperationalDaysPerWeek" Type="int" />
+    <Property Name="DownTime" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Opex" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CurrentWorkForceTb">
+    <Key>
+      <PropertyRef Name="CurrentWorkforceId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="CurrentWorkforceId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="EmployeeName" Type="nvarchar(max)" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateofBirth" Type="date" />
+    <Property Name="DateofHire" Type="date" />
+    <Property Name="CurrentJobTypeId" Type="int" />
+    <Property Name="CurrentSpecialityId" Type="int" />
+    <Property Name="CurrentSubSpecialityId" Type="int" />
+    <Property Name="CertifiedJobTypeId" Type="int" />
+    <Property Name="CertifiedSpecialityId" Type="int" />
+    <Property Name="CertifiedSubSpecialityId" Type="int" />
+    <Property Name="GradeId" Type="int" />
+    <Property Name="PermanentStatus" Type="bit" />
+    <Property Name="Program" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProgramStartDate" Type="date" />
+    <Property Name="YearlySalary" Type="float" />
+    <Property Name="NumberOfHoursPerDay" Type="int" />
+  </EntityType>
+  <EntityType Name="EquipmentParamtersTb">
+    <Key>
+      <PropertyRef Name="EquipmentParameterId" />
+      <PropertyRef Name="EquipmentTypeId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="EquipmentParameterId" Type="int" Nullable="false" />
+    <Property Name="EquipmentTypeId" Type="int" Nullable="false" />
+    <Property Name="AverageLifeTime" Type="int" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentTypeTb">
+    <Key>
+      <PropertyRef Name="EquipmentTypeId" />
+    </Key>
+    <Property Name="EquipmentTypeId" Type="int" Nullable="false" />
+    <Property Name="EquipmentName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MainSupplyTb">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="ServiceName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlannedBedsTb">
+    <Key>
+      <PropertyRef Name="PlannedBedId" />
+      <PropertyRef Name="SubCategoryId" />
+      <PropertyRef Name="BedTypeId" />
+    </Key>
+    <Property Name="PlannedBedId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="BedTypeId" Type="int" Nullable="false" />
+    <Property Name="PlannedYearofPurchase" Type="date" />
+    <Property Name="Count" Type="int" />
+  </EntityType>
+  <EntityType Name="PlannedEquipmentTb">
+    <Key>
+      <PropertyRef Name="PlannedEquipmentId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+      <PropertyRef Name="EquipmentTypeId" />
+    </Key>
+    <Property Name="PlannedEquipmentId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="EquipmentTypeId" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="DateOfPurchase" Type="date" />
+    <Property Name="Count" Type="int" />
+  </EntityType>
+  <EntityType Name="PlannedOperatingRoomTb">
+    <Key>
+      <PropertyRef Name="PlannedOperatingRoomId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="PlannedOperatingRoomId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="DateOfEstablishment" Type="date" />
+    <Property Name="Count" Type="int" />
+  </EntityType>
+  <EntityType Name="PlannedWorkforceTb">
+    <Key>
+      <PropertyRef Name="PlannedWorkforceId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="PlannedWorkforceId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="CurrentSpecialityId" Type="int" />
+    <Property Name="CertifiedSpecialityId" Type="int" />
+    <Property Name="CertifiedSubSpecialityId" Type="int" />
+    <Property Name="GradeId" Type="int" />
+    <Property Name="YearOfJoining" Type="date" />
+    <Property Name="Count" Type="int" />
+  </EntityType>
+  <EntityType Name="SubCategoryTb">
+    <Key>
+      <PropertyRef Name="SubCategoryId" />
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="HospitalName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserTb">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkforceCertifiedJobTypeTb">
+    <Key>
+      <PropertyRef Name="CertifiedJobTypeId" />
+    </Key>
+    <Property Name="CertifiedJobTypeId" Type="int" Nullable="false" />
+    <Property Name="CertifiedJobType" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkforceCertifiedSpecialityTb">
+    <Key>
+      <PropertyRef Name="CertifiedSpecialityId" />
+    </Key>
+    <Property Name="CertifiedSpecialityId" Type="int" Nullable="false" />
+    <Property Name="CertifiedSpeciality" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkforceCertifiedSubSpecialityTb">
+    <Key>
+      <PropertyRef Name="CertifiedSubSpecialityId" />
+    </Key>
+    <Property Name="CertifiedSubSpecialityId" Type="int" Nullable="false" />
+    <Property Name="CertifiedSubSpeciality" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkforceClinicalProgramTb">
+    <Key>
+      <PropertyRef Name="ClinicalProgramId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="ClinicalProgramId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="ProgramName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Duration" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkforceCurrentJobTypeTb">
+    <Key>
+      <PropertyRef Name="CurrentJobTypeId" />
+    </Key>
+    <Property Name="CurrentJobTypeId" Type="int" Nullable="false" />
+    <Property Name="CurrentJobType" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkforceCurrentSpecialityTb">
+    <Key>
+      <PropertyRef Name="CurrentSpecialityId" />
+    </Key>
+    <Property Name="CurrentSpecialityId" Type="int" Nullable="false" />
+    <Property Name="CurrentSpeciality" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkforceCurrentSubSpecialityTb">
+    <Key>
+      <PropertyRef Name="CurrentSubSpecialityId" />
+    </Key>
+    <Property Name="CurrentSubSpecialityId" Type="int" Nullable="false" />
+    <Property Name="CurrentSpecialityId" Type="int" />
+    <Property Name="CurrentSubSpeciality" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkforceGradeTb">
+    <Key>
+      <PropertyRef Name="GradeId" />
+    </Key>
+    <Property Name="GradeId" Type="int" Nullable="false" />
+    <Property Name="Grade" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkforceParamtersTb">
+    <Key>
+      <PropertyRef Name="WorkforceParamterId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="WorkforceParamterId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="CurrentSpecialityId" Type="int" />
+    <Property Name="CurrentSubSpecialityId" Type="int" />
+    <Property Name="GradeId" Type="int" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="AttritionRate" Type="float" />
+    <Property Name="AbsentismRate" Type="float" />
+    <Property Name="RetirementAge" Type="int" />
+    <Property Name="FTEPerDayHours" Type="int" />
+  </EntityType>
+  <EntityContainer Name="HospitalManagementModelStoreContainer">
+    <EntitySet Name="BedsParamtersTb" EntityType="Self.BedsParamtersTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BedTypesTb" EntityType="Self.BedTypesTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryTb" EntityType="Self.CategoryTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentBedTb" EntityType="Self.CurrentBedTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentEquipmentTb" EntityType="Self.CurrentEquipmentTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentOperatingRoomTb" EntityType="Self.CurrentOperatingRoomTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentWorkForceTb" EntityType="Self.CurrentWorkForceTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EquipmentParamtersTb" EntityType="Self.EquipmentParamtersTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EquipmentTypeTb" EntityType="Self.EquipmentTypeTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MainSupplyTb" EntityType="Self.MainSupplyTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlannedBedsTb" EntityType="Self.PlannedBedsTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlannedEquipmentTb" EntityType="Self.PlannedEquipmentTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlannedOperatingRoomTb" EntityType="Self.PlannedOperatingRoomTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlannedWorkforceTb" EntityType="Self.PlannedWorkforceTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubCategoryTb" EntityType="Self.SubCategoryTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTb" EntityType="Self.UserTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceCertifiedJobTypeTb" EntityType="Self.WorkforceCertifiedJobTypeTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceCertifiedSpecialityTb" EntityType="Self.WorkforceCertifiedSpecialityTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceCertifiedSubSpecialityTb" EntityType="Self.WorkforceCertifiedSubSpecialityTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceClinicalProgramTb" EntityType="Self.WorkforceClinicalProgramTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceCurrentJobTypeTb" EntityType="Self.WorkforceCurrentJobTypeTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceCurrentSpecialityTb" EntityType="Self.WorkforceCurrentSpecialityTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceCurrentSubSpecialityTb" EntityType="Self.WorkforceCurrentSubSpecialityTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceGradeTb" EntityType="Self.WorkforceGradeTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkforceParamtersTb" EntityType="Self.WorkforceParamtersTb" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8737c75b2834399a44394e897fb5bcf" Name="Diagram1">
+        <EntityTypeShape EntityType="HospitalManagementModel.BedsParamtersTb" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.BedTypesTb" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.CategoryTb" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.CurrentBedTb" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.CurrentEquipmentTb" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.CurrentOperatingRoomTb" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.CurrentWorkForceTb" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.EquipmentParamtersTb" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.EquipmentTypeTb" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.MainSupplyTb" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.PlannedBedsTb" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.PlannedEquipmentTb" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.PlannedOperatingRoomTb" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.PlannedWorkforceTb" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.SubCategoryTb" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.UserTb" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceCertifiedJobTypeTb" Width="1.5" PointX="6.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceCertifiedSpecialityTb" Width="1.5" PointX="10.75" PointY="7.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceCertifiedSubSpecialityTb" Width="1.5" PointX="8.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceClinicalProgramTb" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceCurrentJobTypeTb" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceCurrentSpecialityTb" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceCurrentSubSpecialityTb" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceGradeTb" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="HospitalManagementModel.WorkforceParamtersTb" Width="1.5" PointX="12.75" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
